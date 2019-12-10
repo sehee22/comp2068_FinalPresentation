@@ -1,0 +1,20 @@
+﻿include header
+
+block content
+    h1 Login
+    form(method='post' action='/login')
+        div
+            label Username
+            input(name='username' required placeholder='Username')
+        div
+            label Password
+            input(name='password' required placeholder='Password' type='password')
+        div
+            input(name='id' type='hidden' value=id)
+            input(type='submit' value='Login account')
+
+        //div
+            //Sehee: src='file' -> file
+            //img(src=file)
+
+//- include footer

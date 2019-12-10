@@ -1,0 +1,24 @@
+﻿include header
+
+//- code by mahmoud
+
+block content
+    h1 Register
+    //- Sehee: uploading image
+    form(method='post' action='/register' enctype='multipart/form-data')
+        div
+            label Username
+            input(name='username' required placeholder='Username')
+        div
+            label Password
+            input(name='password' required placeholder='Password' type='password')
+        div
+            label Phone
+            input(name='phone' placeholder='Phone')
+        div
+            label Image
+            input(name='img' type='file')
+        div
+            input(type='submit' value='Create account')
+
+//- include footer

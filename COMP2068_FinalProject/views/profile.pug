@@ -1,0 +1,29 @@
+﻿include header
+
+//-Sehee
+block content
+    h1 Profile
+    form(method='post' action='/profile' enctype='multipart/form-data')
+        div
+            label Username
+            br
+            input(name='username' required value=username readonly)
+        div
+            label Phone Number
+            br
+            input(name='phone' required value=phone)
+        div
+            label Photo
+            br
+            if(img && img!= null)
+                img(src=img height= 300)
+                input(name='orgImg' value=img class='inv')
+            else
+                p Upload your Image :)
+            br
+            input(name='img' type='file' value=img)
+        div
+            input(name='id' type='hidden' value=id)
+            a(href="/profile/passwordReset/"+id) Change your password
+
+        input(type='submit' value='Edit')
